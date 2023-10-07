@@ -1,0 +1,27 @@
+{
+    "name": "silverhand7/laravel-artisan-maker",
+    "description": "Create service, action, etc using Laravel artisan command",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Silverhand7\\LaravelArtisanMaker\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "silverhand7",
+            "email": "refojunior5@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "spatie/laravel-package-tools": "^1.9.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Silverhand7\\LaravelArtisanMaker\\LaravelArtisanMakerServiceProvider"
+            ]
+        }
+    }
+}
