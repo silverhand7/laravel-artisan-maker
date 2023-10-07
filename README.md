@@ -10,3 +10,9 @@ Run the following command:
 `php artisan make:service {YourService}` \
 The service will be created and can be found at app/Services/{YourService}.php \
 For example: `php artisan make:service UserService`
+
+### Create an action class:
+Run the following command:
+`php artisan make:action {YourAction}` \
+The service will be created and can be found at app/Services/{YourService}.php \
+For example: `php artisan make:action UserStoreAction`
