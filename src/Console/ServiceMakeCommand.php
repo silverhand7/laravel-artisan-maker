@@ -1,12 +1,12 @@
 <?php
 
-namespace Silverhand7\LaravelArtisanMaker\Console\Commands;
+namespace Silverhand7\LaravelArtisanMaker\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
 
-class ServiceMakerCommand extends GeneratorCommand
+class ServiceMakeCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
@@ -21,7 +21,7 @@ class ServiceMakerCommand extends GeneratorCommand
 
     protected function getStub(): string
     {
-        return __DIR__.'/../../../stubs/service.stub';
+        return __DIR__.'/stubs/service.stub';
     }
 
     protected function buildClass($name): string

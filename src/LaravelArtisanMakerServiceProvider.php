@@ -3,8 +3,7 @@
 namespace Silverhand7\LaravelArtisanMaker;
 
 use Illuminate\Support\ServiceProvider;
-use Silverhand7\LaravelArtisanMaker\Console\Commands\ServiceMakerCommand;
-use Silverhand7\LaravelArtisanMaker\Console\Generators\ServiceMakerGenerator;
+use Silverhand7\LaravelArtisanMaker\Console\ServiceMakeCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -14,6 +13,6 @@ class LaravelArtisanMakerServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('laravel-artisan-maker')
-            ->hasCommand(ServiceMakerCommand::class);
+            ->hasCommand(ServiceMakeCommand::class);
     }
 }
