@@ -1,7 +1,11 @@
 {
     "name": "silverhand7/laravel-artisan-maker",
-    "description": "Create service, action, etc using Laravel artisan command",
-    "type": "library",
+    "description": "A simple package that can help you to create a boilerplate of a service or action class.",
+    "keywords": [
+        "laravel",
+        "silverhand7",
+        "laravel-artisan-maker"
+    ],
     "autoload": {
         "psr-4": {
             "Silverhand7\\LaravelArtisanMaker\\": "src/"

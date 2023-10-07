@@ -5,18 +5,18 @@ namespace Silverhand7\LaravelArtisanMaker\Console;
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
 
-class ServiceMakeCommand extends GeneratorCommand
+class ActionMakeCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'make:service {name}';
+    protected $signature = 'make:action {name}';
 
-    protected $description = 'Make a service class';
+    protected $description = 'Make an action class';
 
-    protected $type = 'Service';
+    protected $type = 'Action';
 
     protected function getStub(): string
     {
@@ -25,18 +25,18 @@ class ServiceMakeCommand extends GeneratorCommand
 
     protected function buildClass($name): string
     {
-        $serviceName = "{$name}";
+        $actionName = "{$name}";
 
         $stub = $this->files->get($this->getStub());
 
-        return $this->replaceNamespace($stub, $serviceName)
+        return $this->replaceNamespace($stub, $actionName)
                     ->replaceClass($stub, $name);
     }
 
     protected function replaceClass($stub, $name): string
     {
-        $serviceName = "{$name}";
-        $className = Str::replace($this->getNamespace($serviceName).'\\', '', $serviceName);
+        $actionName = "{$name}";
+        $className = Str::replace($this->getNamespace($actionName).'\\', '', $actionName);
 
         $replace = [
             '{{ className }}' => $className,
@@ -53,6 +53,6 @@ class ServiceMakeCommand extends GeneratorCommand
 
     protected function getDefaultNamespace($rootNamespace): string
     {
-        return "{$rootNamespace}\\Services";
+        return "{$rootNamespace}\\Actions";
     }
 }
