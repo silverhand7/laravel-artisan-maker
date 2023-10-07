@@ -12,19 +12,16 @@ trait FileGenerable
 
     protected function buildClass($name): string
     {
-        $typeName = "{$name}";
-
         $stub = $this->files->get($this->getStub());
 
         return $this
-                ->replaceNamespace($stub, $typeName)
+                ->replaceNamespace($stub, $name)
                 ->replaceClass($stub, $name);
     }
 
     protected function replaceClass($stub, $name): string
     {
-        $typeName = "{$name}";
-        $className = Str::replace($this->getNamespace($typeName).'\\', '', $typeName);
+        $className = Str::replace($this->getNamespace($name).'\\', '', $name);
 
         $replace = [
             '{{ className }}' => $className,
