@@ -2,7 +2,7 @@
 A simple package that can help you to create a boilerplate of a service or action class.
 
 ## Installation
-`composer require silverhand7/laravel-artisan-maker` 
+`composer require silverhand7/laravel-artisan-maker dev-main` 
 
 ## Usage 
 ### Create a service class:
