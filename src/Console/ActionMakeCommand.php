@@ -3,7 +3,6 @@
 namespace Silverhand7\LaravelArtisanMaker\Console;
 
 use Illuminate\Console\GeneratorCommand;
-use Illuminate\Support\Str;
 
 class ActionMakeCommand extends GeneratorCommand
 {
