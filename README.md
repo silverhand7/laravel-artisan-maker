@@ -14,5 +14,5 @@ For example: `php artisan make:service UserService`
 ### Create an action class:
 Run the following command:
 `php artisan make:action {YourAction}` \
-The service will be created and can be found at app/Services/{YourService}.php \
+The action will be created and can be found at app/Actions/{YourService}.php \
 For example: `php artisan make:action UserStoreAction`
