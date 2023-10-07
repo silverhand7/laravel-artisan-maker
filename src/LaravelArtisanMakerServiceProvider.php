@@ -4,6 +4,7 @@ namespace Silverhand7\LaravelArtisanMaker;
 
 use Illuminate\Support\ServiceProvider;
 use Silverhand7\LaravelArtisanMaker\Console\Commands\ServiceMakerCommand;
+use Silverhand7\LaravelArtisanMaker\Console\Generators\ServiceMakerGenerator;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
