@@ -29,7 +29,7 @@ class ServiceMakeCommand extends GeneratorCommand
             $stub = $this->files->get($this->getClassImplementInterfaceStub());
 
             return $this
-                ->replaceInterfaceUseClass($stub, $interfaceUseNamespace)
+                ->replaceInterfaceUseNamespace($stub, $interfaceUseNamespace)
                 ->replaceInterfaceClass($stub, $interfaceName)
                 ->replaceNamespace($stub, $name)
                 ->replaceClass($stub, $name);
@@ -48,7 +48,7 @@ class ServiceMakeCommand extends GeneratorCommand
         return $this;
     }
 
-    protected function replaceInterfaceUseClass(&$stub, $interfaceUseNamespace)
+    protected function replaceInterfaceUseNamespace(&$stub, $interfaceUseNamespace)
     {
         $stub = Str::replace("{{ interfaceUseNamespace }}", $interfaceUseNamespace, $stub);
         return $this;
