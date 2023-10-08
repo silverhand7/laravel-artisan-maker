@@ -7,7 +7,7 @@ trait FileGenerable
 {
     protected function getStub(): string
     {
-        return __DIR__.'/stubs/boilerplate.stub';
+        return __DIR__.'/stubs/class.stub';
     }
 
     protected function buildClass($name): string

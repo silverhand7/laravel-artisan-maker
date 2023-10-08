@@ -12,4 +12,10 @@ return [
      * This will also affect the directory of your action class location.
      */
     'action_namespace' => 'App\Actions',
+
+    /**
+     * Set your default namespace for Interface class
+     * This will also affect the directory of your interface class location.
+     */
+    'interface_namespace' => 'App\Contracts',
 ];
