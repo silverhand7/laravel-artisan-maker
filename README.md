@@ -1,5 +1,5 @@
 # Laravel Artisan Maker 
-A simple package that can help you to create a boilerplate of a service or action class.
+A simple package that can help you create a boilerplate of a service, action, or interface class with artisan command.
 
 ## Installation
 ```bash 
