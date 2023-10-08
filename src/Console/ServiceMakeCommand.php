@@ -28,7 +28,7 @@ class ServiceMakeCommand extends GeneratorCommand
             $interfaceUseNamespace = config('artisan-maker.interface_namespace') . '\\' . $interfaceName;
 
             if (!$this->checkInterfaceExists($interfaceUseNamespace)) {
-                if ($this->confirm('Interface does not exist, do you want to create one?', true)) {
+                if ($this->confirm("The {$interfaceName} does not exist in " . config('artisan-maker.interface_namespace') . ", do you want to create one?", true)) {
                     Artisan::call('make:interface', [
                         'name' => $interfaceName
                     ]);
