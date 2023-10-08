@@ -14,6 +14,7 @@ class LaravelArtisanMakerServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('laravel-artisan-maker')
+            ->hasConfigFile()
             ->hasCommand(ServiceMakeCommand::class)
             ->hasCommand(ActionMakeCommand::class);
     }

@@ -30,17 +30,11 @@ trait FileGenerable
         return Str::replace(array_keys($replace), array_values($replace), $stub);
     }
 
-    protected function getPath($name): string
-    {
-        $name = Str::replaceFirst($this->rootNamespace(), '', $name);
-
-        return $this->laravel['path'].'/'.Str::replace('\\', '/', $name).'.php';
-    }
-
     protected function getDefaultNamespace($rootNamespace): string
     {
-        $nameSpace = Str::of($this->type)->plural();
+        $type = Str::lower($this->type);
+        $nameSpace = config("artisan-maker.{$type}_namespace");
 
-        return "{$rootNamespace}\\{$nameSpace}";
+        return $nameSpace;
     }
 }
