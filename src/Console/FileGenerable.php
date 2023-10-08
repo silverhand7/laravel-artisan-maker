@@ -19,7 +19,7 @@ trait FileGenerable
                 ->replaceClass($stub, $name);
     }
 
-    protected function replaceClass(&$stub, $name): string
+    protected function replaceClass($stub, $name): string
     {
         $className = Str::replace($this->getNamespace($name).'\\', '', $name);
 

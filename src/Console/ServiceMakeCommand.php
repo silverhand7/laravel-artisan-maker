@@ -3,6 +3,7 @@
 namespace Silverhand7\LaravelArtisanMaker\Console;
 
 use Illuminate\Console\GeneratorCommand;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Str;
 
 class ServiceMakeCommand extends GeneratorCommand
@@ -26,13 +27,22 @@ class ServiceMakeCommand extends GeneratorCommand
             $interfaceName = $this->option('interface') ?? $this->option('i');
             $interfaceUseNamespace = config('artisan-maker.interface_namespace') . '\\' . $interfaceName;
 
+            if (!$this->checkInterfaceExists($interfaceUseNamespace)) {
+                if ($this->confirm('Interface does not exist, do you want to create one?', true)) {
+                    Artisan::call('make:interface', [
+                        'name' => $interfaceName
+                    ]);
+                }
+            }
+
+
             $stub = $this->files->get($this->getClassImplementInterfaceStub());
 
             return $this
-                ->replaceInterfaceUseNamespace($stub, $interfaceUseNamespace)
-                ->replaceInterfaceClass($stub, $interfaceName)
-                ->replaceNamespace($stub, $name)
-                ->replaceClass($stub, $name);
+                    ->replaceInterfaceUseNamespace($stub, $interfaceUseNamespace)
+                    ->replaceInterfaceClass($stub, $interfaceName)
+                    ->replaceNamespace($stub, $name)
+                    ->replaceClass($stub, $name);
         }
 
         $stub = $this->files->get($this->getStub());
@@ -52,5 +62,12 @@ class ServiceMakeCommand extends GeneratorCommand
     {
         $stub = Str::replace("{{ interfaceUseNamespace }}", $interfaceUseNamespace, $stub);
         return $this;
+    }
+
+    protected function checkInterfaceExists($interfaceUseNamespace): bool
+    {
+        $paths = explode('\\', $interfaceUseNamespace);
+        array_shift($paths);
+        return file_exists($this->laravel['path'] . '/' . implode('/', $paths) . '.php');
     }
 }
