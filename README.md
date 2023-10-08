@@ -14,7 +14,7 @@ php artisan make:service {YourService}
 ```
 The service will be created and can be found at app/Services/{YourService}.php \
 For example: `php artisan make:service UserService`
-#### Additionally you can create a service that implements interface class
+#### Additionally, you can create a service that implements an interface class
 ```
 php artisan make:service {YourService} --interface={YourInterface}
 ```
