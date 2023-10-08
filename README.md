@@ -36,7 +36,7 @@ Run the following command:
 ```
 php artisan make:interface {YourInterface}
 ```
-The action will be created and can be found at app/Contracts/{YourInterface}.php \
+The interface will be created and can be found at app/Contracts/{YourInterface}.php \
 For example: `php artisan make:interface UserService`
 
 ## Custom your generated file location
