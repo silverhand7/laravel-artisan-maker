@@ -2,7 +2,6 @@
 
 namespace Silverhand7\LaravelArtisanMaker;
 
-use Illuminate\Support\ServiceProvider;
 use Silverhand7\LaravelArtisanMaker\Console\ActionMakeCommand;
 use Silverhand7\LaravelArtisanMaker\Console\InterfaceMakeCommand;
 use Silverhand7\LaravelArtisanMaker\Console\ServiceMakeCommand;
