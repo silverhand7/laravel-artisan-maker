@@ -37,4 +37,10 @@ trait FileGenerable
 
         return $nameSpace;
     }
+
+    protected function getPath($name)
+    {
+        $type = Str::lower($this->type);
+        return $this->laravel->basePath() . '/' . config("artisan-maker.{$type}_directory") . '/' . $this->getNameInput() .'.php';
+    }
 }
