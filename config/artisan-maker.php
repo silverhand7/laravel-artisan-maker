@@ -3,19 +3,31 @@
 return [
     /**
      * Set your default namespace for Service class.
-     * This will also affect the directory of your service class location.
      */
     'service_namespace' => 'App\Services',
 
     /**
+     * Set the default directory for your service class location.
+     */
+    'service_directory' => 'app/Services',
+
+    /**
      * Set your default namespace for Action class
-     * This will also affect the directory of your action class location.
      */
     'action_namespace' => 'App\Actions',
 
     /**
+     * Set the default directory for your action class location.
+     */
+    'action_directory' => 'app/Actions',
+
+    /**
      * Set your default namespace for Interface class
-     * This will also affect the directory of your interface class location.
      */
     'interface_namespace' => 'App\Contracts',
+
+    /**
+     * Set the default directory for your interface class location.
+     */
+    'interface_directory' => 'app/Contracts',
 ];
