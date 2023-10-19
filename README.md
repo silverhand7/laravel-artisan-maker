@@ -20,7 +20,7 @@ php artisan make:service {YourService} --interface={YourInterface}
 ```
 or 
 ```
-php artisan make:service {YourService} --i={YourInterface}
+php artisan make:service {YourService} -i {YourInterface}
 ```
 
 ### Create an action class:
