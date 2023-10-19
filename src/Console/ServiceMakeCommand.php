@@ -10,7 +10,7 @@ class ServiceMakeCommand extends GeneratorCommand
 {
     use FileGenerable;
 
-    protected $signature = 'make:service {name} {--interface=} {--i=}';
+    protected $signature = 'make:service {name} {--i|interface=}';
 
     protected $description = 'Make a service class';
 
@@ -23,8 +23,7 @@ class ServiceMakeCommand extends GeneratorCommand
 
     protected function buildClass($name): string
     {
-        if ($this->option('interface') || $this->option('i')) {
-            $interfaceName = $this->option('interface') ?? $this->option('i');
+        if ($interfaceName = $this->option('interface')) {
             $interfaceUseNamespace = config('artisan-maker.interface_namespace') . '\\' . $interfaceName;
 
             if (!$this->checkInterfaceExists($interfaceUseNamespace)) {
