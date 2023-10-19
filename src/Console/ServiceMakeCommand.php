@@ -34,7 +34,6 @@ class ServiceMakeCommand extends GeneratorCommand
                 }
             }
 
-
             $stub = $this->files->get($this->getClassImplementInterfaceStub());
 
             return $this
