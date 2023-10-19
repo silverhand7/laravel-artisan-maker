@@ -39,7 +39,7 @@ php artisan make:interface {YourInterface}
 The interface will be created and can be found at app/Contracts/{YourInterface}.php \
 For example: `php artisan make:interface UserService`
 
-## Custom your generated file location
+## Custom your namespace and generated file location
 You can easily customize where you want to locate your Service, Action, or Interface class. You can do that by publishing the config file using the following command:
 ```
 php artisan vendor:publish --tag=artisan-maker-config
@@ -47,6 +47,7 @@ php artisan vendor:publish --tag=artisan-maker-config
 You can customize it in `config/artisan-maker.php`, for example: 
 ```
 'service_interface' => 'App\MyOwnServices'
+'service_directory' => 'app/MyOwnServices'
 ```
 Your next generated service will be in the `app/MyOwnServices` folder and your namespace for service will be `App\MyOwnServices`.
 
