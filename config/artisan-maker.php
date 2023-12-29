@@ -30,4 +30,14 @@ return [
      * Set the default directory for your interface class location.
      */
     'interface_directory' => 'app/Contracts',
+
+    /**
+     * Set your default namespace for Facade class
+     */
+    'facade_namespace' => 'App\Facades',
+    /**
+     * Set the default directory for your facade class location.
+     */
+    'facade_directory' => 'app/Facades',
+
 ];
