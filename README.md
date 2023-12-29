@@ -1,12 +1,12 @@
-# Laravel Artisan Maker 
-A simple package that can help you create a boilerplate of a service, action, or interface class with artisan command.
+# Laravel Artisan Maker
+A simple package that can help you create a boilerplate of a service, action, interface and facade class with artisan command.
 
 ## Installation
-```bash 
+```bash
 composer require silverhand7/laravel-artisan-maker
 ```
 
-## Usage 
+## Usage
 ### Create a service class:
 Run the following command:
 ```
@@ -18,7 +18,7 @@ For example: `php artisan make:service UserService`
 ```
 php artisan make:service {YourService} --interface={YourInterface}
 ```
-or 
+or
 ```
 php artisan make:service {YourService} -i {YourInterface}
 ```
@@ -37,14 +37,22 @@ Run the following command:
 php artisan make:interface {YourInterface}
 ```
 The interface will be created and can be found at app/Contracts/{YourInterface}.php \
-For example: `php artisan make:interface UserService`
+For example: `php artisan make:interface UserServiceInterface`
+
+### Create a facade class:
+Run the following command:
+```
+php artisan make:facade {YourFacade}
+```
+The facade will be created and can be found at app/Facades/{YourFacade}.php \
+For example: `php artisan make:facade UserFacade`
 
 ## Custom your namespace and generated file location
-You can easily customize where you want to locate your Service, Action, or Interface class. You can do that by publishing the config file using the following command:
+You can easily customize where you want to locate your Service, Action, Interface or Facade class. You can do that by publishing the config file using the following command:
 ```
 php artisan vendor:publish --tag=artisan-maker-config
 ```
-You can customize it in `config/artisan-maker.php`, for example: 
+You can customize it in `config/artisan-maker.php`, for example:
 ```
 'service_interface' => 'App\MyOwnServices'
 'service_directory' => 'app/MyOwnServices'
