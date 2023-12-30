@@ -4,6 +4,9 @@
     <env name="APP_KEY" value="base64:aGude4m0NljMCaet+pSGMAZJ5SeUcGHuIAvlPKGTKAs="/>
   </php>
   <testsuites>
+    <testsuite name="Feature">
+      <directory suffix="Test.php">./tests/</directory>
+    </testsuite>
     <testsuite name="Unit">
       <directory suffix="Test.php">./tests/</directory>
     </testsuite>
