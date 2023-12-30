@@ -3,6 +3,7 @@
 namespace Silverhand7\LaravelArtisanMaker;
 
 use Silverhand7\LaravelArtisanMaker\Console\ActionMakeCommand;
+use Silverhand7\LaravelArtisanMaker\Console\FacadeMakeCommand;
 use Silverhand7\LaravelArtisanMaker\Console\InterfaceMakeCommand;
 use Silverhand7\LaravelArtisanMaker\Console\ServiceMakeCommand;
 use Spatie\LaravelPackageTools\Package;
@@ -17,6 +18,7 @@ class LaravelArtisanMakerServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasCommand(ServiceMakeCommand::class)
             ->hasCommand(ActionMakeCommand::class)
-            ->hasCommand(InterfaceMakeCommand::class);
+            ->hasCommand(InterfaceMakeCommand::class)
+            ->hasCommand(FacadeMakeCommand::class);
     }
 }
