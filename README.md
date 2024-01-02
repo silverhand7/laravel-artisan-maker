@@ -1,6 +1,14 @@
 # Laravel Artisan Maker
 A simple package that can help you create a boilerplate of a service, action, interface and facade class with artisan command.
 
+Example usage:
+```
+php artisan make:action UserStoreAction
+php artisan make:service UserService
+php artisan make:interface UserServiceInterface
+php artisan make:facade UserFacade 
+```
+
 ## Installation
 ```bash
 composer require silverhand7/laravel-artisan-maker
