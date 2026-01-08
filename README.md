@@ -1,4 +1,6 @@
 # Laravel Artisan Maker
+![Packagist Downloads](https://img.shields.io/packagist/dt/silverhand7/laravel-artisan-maker)
+
 A simple package that can help you create a boilerplate of a service, action, interface and facade class with artisan command.
 
 Example usage:
